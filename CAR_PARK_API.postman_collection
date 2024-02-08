@@ -1,0 +1,1378 @@
+{
+	"info": {
+		"_postman_id": "089675da-fe5a-4c29-9932-d9a02fb1c611",
+		"name": "CAR PARK API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1512938"
+	},
+	"item": [
+		{
+			"name": "/api/token/ for login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/token/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "qwerty12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/token/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:04:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "483"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwNzQ1ODY4OCwiaWF0IjoxNzA3MzcyMjg4LCJqdGkiOiJmOGEyNjExMWNmNjE0OTQwYjVjYTRkNzU3ZGQ2YTJhZCIsInVzZXJfaWQiOjF9.oo-lKhvK2gjVb38yHjAjQ95gNKKimeDZ2GBGxkXDr_0\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyNTg4LCJpYXQiOjE3MDczNzIyODgsImp0aSI6Ijk1ODE1NjU2MmZlNzQ2Mjg4Y2I3ZjhlMGQwZTdkN2MwIiwidXNlcl9pZCI6MX0.6NCERLkShpgYdq0dd3vSM9Pjl26kFXBD7LW9LcPs94k\"\n}"
+				},
+				{
+					"name": "401 Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "qwerty1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/token/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:05:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Bearer realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"No active account found with the given credentials\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/api/token/refresh/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwNzQ1ODY4OCwiaWF0IjoxNzA3MzcyMjg4LCJqdGkiOiJmOGEyNjExMWNmNjE0OTQwYjVjYTRkNzU3ZGQ2YTJhZCIsInVzZXJfaWQiOjF9.oo-lKhvK2gjVb38yHjAjQ95gNKKimeDZ2GBGxkXDr_0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/token/refresh/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwNzQ1ODY4OCwiaWF0IjoxNzA3MzcyMjg4LCJqdGkiOiJmOGEyNjExMWNmNjE0OTQwYjVjYTRkNzU3ZGQ2YTJhZCIsInVzZXJfaWQiOjF9.oo-lKhvK2gjVb38yHjAjQ95gNKKimeDZ2GBGxkXDr_0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/token/refresh/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:05:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "241"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyNjQwLCJpYXQiOjE3MDczNzIyODgsImp0aSI6ImQyZTFhODVjMjE4YjRiZDhiNTliNTRmYWVkMjZiYzlmIiwidXNlcl9pZCI6MX0.5OgzJypPW4yR5fi4VNNNZGOrofhcurw33zQ0JM7GXBk\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/api/token/verify/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwNzM5MjU4MCwiaWF0IjoxNzA3MzA2MTgwLCJqdGkiOiI4Mzc0NzRmMjMwYjI0ZTc3OTQ0ZTRmNjYzMDM0Yjg3ZCIsInVzZXJfaWQiOjF9.dPPKuLuf3OlJkfdCSMSl8Z97qUrRZhhtvczTRcdf4iE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/token/verify/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"token",
+						"verify",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwNzM5MjU4MCwiaWF0IjoxNzA3MzA2MTgwLCJqdGkiOiI4Mzc0NzRmMjMwYjI0ZTc3OTQ0ZTRmNjYzMDM0Yjg3ZCIsInVzZXJfaWQiOjF9.dPPKuLuf3OlJkfdCSMSl8Z97qUrRZhhtvczTRcdf4iE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/token/verify/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"token",
+								"verify",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:06:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "transaction/detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzczMDQyLCJpYXQiOjE3MDczNzI3NDIsImp0aSI6ImRkNmFlMTQxOTFmYzQ1ZmFhN2VhZTYwZWEyNDFiMjlmIiwidXNlcl9pZCI6MX0.5rgrXFloaRoiaZMJ7mum9pBDFyo_S3oSbGhALy6-dME",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/parking/transaction/detail/?car_number=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"parking",
+						"transaction",
+						"detail",
+						""
+					],
+					"query": [
+						{
+							"key": "car_number",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "401",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzY4MzI3LCJpYXQiOjE3MDczNjgwMjcsImp0aSI6ImE1NTE1ZTZhOTljYzQyMzdiMTVmZjgxYjNkNTcwODg3IiwidXNlcl9pZCI6MX0.KB2Ar33OWZmtlPocnNLCgzUokyP6RyoYNTd9PXN7eJE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/parking/transaction/detail/?car_number=12345",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"transaction",
+								"detail",
+								""
+							],
+							"query": [
+								{
+									"key": "car_number",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:07:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Bearer realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Given token not valid for any token type\",\n    \"code\": \"token_not_valid\",\n    \"messages\": [\n        {\n            \"token_class\": \"AccessToken\",\n            \"token_type\": \"access\",\n            \"message\": \"Token is invalid or expired\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "400 Data Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyNzU4LCJpYXQiOjE3MDczNzI0NTgsImp0aSI6ImRhMTFlMGEwYjFhMTQ4MGM4MjhjYmVkMjc4M2EzMmRiIiwidXNlcl9pZCI6MX0.huB6PvCtZ949dZ84ZKaLWmdiJm8oDR3RKKA6TK2dYI8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/parking/transaction/detail/?car_number=12345",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"transaction",
+								"detail",
+								""
+							],
+							"query": [
+								{
+									"key": "car_number",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:07:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"NOT OK\",\n    \"message\": \"Transaction not found\"\n}"
+				},
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzczMDQyLCJpYXQiOjE3MDczNzI3NDIsImp0aSI6ImRkNmFlMTQxOTFmYzQ1ZmFhN2VhZTYwZWEyNDFiMjlmIiwidXNlcl9pZCI6MX0.5rgrXFloaRoiaZMJ7mum9pBDFyo_S3oSbGhALy6-dME",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/parking/transaction/detail/?car_number=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"transaction",
+								"detail",
+								""
+							],
+							"query": [
+								{
+									"key": "car_number",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:14:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "197"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"car_number\": \"1\",\n        \"parking_status\": \"Exit\",\n        \"entry_date\": \"2024-02-08T13:10:28.211927Z\",\n        \"exit_date\": \"2024-02-08T13:13:04.633218Z\",\n        \"created_user\": \"admin\",\n        \"modified_user\": \"admin\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "parking/reporting/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyODMxLCJpYXQiOjE3MDczNzI1MzEsImp0aSI6ImM5MjUwNzhkMzQyYzQ3MWY5MzI0MjY3OGY0ZjRiY2FjIiwidXNlcl9pZCI6MX0.n0S85dRlVpUceQ8EZr93YX7My10I3VPam9TzeChuzhI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/parking/reporting/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"parking",
+						"reporting",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "401",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzY5OTEzLCJpYXQiOjE3MDczNjk2MTMsImp0aSI6IjhkYjY1NzhjMzczZTRmMGFiYWMzMzM5ODVlNWE3ODEwIiwidXNlcl9pZCI6MX0.dbIszA75TcCdYYqjDc0uxvocLXqschhqtC__9nkGCJ4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/parking/reporting/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"reporting",
+								""
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:08:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Bearer realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Given token not valid for any token type\",\n    \"code\": \"token_not_valid\",\n    \"messages\": [\n        {\n            \"token_class\": \"AccessToken\",\n            \"token_type\": \"access\",\n            \"message\": \"Token is invalid or expired\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyODMxLCJpYXQiOjE3MDczNzI1MzEsImp0aSI6ImM5MjUwNzhkMzQyYzQ3MWY5MzI0MjY3OGY0ZjRiY2FjIiwidXNlcl9pZCI6MX0.n0S85dRlVpUceQ8EZr93YX7My10I3VPam9TzeChuzhI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/parking/reporting/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"reporting",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:09:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "123"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"parking_capacity\": 3,\n        \"number_of_cars_entering\": 0,\n        \"remaining_capacity\": 3,\n        \"number_of_cars_waiting\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "transaction/entry/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyODMxLCJpYXQiOjE3MDczNzI1MzEsImp0aSI6ImM5MjUwNzhkMzQyYzQ3MWY5MzI0MjY3OGY0ZjRiY2FjIiwidXNlcl9pZCI6MX0.n0S85dRlVpUceQ8EZr93YX7My10I3VPam9TzeChuzhI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"car_number\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/parking/transaction/entry/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"parking",
+						"transaction",
+						"entry",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyODMxLCJpYXQiOjE3MDczNzI1MzEsImp0aSI6ImM5MjUwNzhkMzQyYzQ3MWY5MzI0MjY3OGY0ZjRiY2FjIiwidXNlcl9pZCI6MX0.n0S85dRlVpUceQ8EZr93YX7My10I3VPam9TzeChuzhI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"car_number\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parking/transaction/entry/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"transaction",
+								"entry",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:10:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"message\": \"Car 1 entered the car park.\"\n}"
+				},
+				{
+					"name": "200 OK join queue",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyODMxLCJpYXQiOjE3MDczNzI1MzEsImp0aSI6ImM5MjUwNzhkMzQyYzQ3MWY5MzI0MjY3OGY0ZjRiY2FjIiwidXNlcl9pZCI6MX0.n0S85dRlVpUceQ8EZr93YX7My10I3VPam9TzeChuzhI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"car_number\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parking/transaction/entry/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"transaction",
+								"entry",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:11:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"message\": \"Car 4 joined the queue.\"\n}"
+				},
+				{
+					"name": "401",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcwMDQ1LCJpYXQiOjE3MDczNjk3NDUsImp0aSI6IjM1NDMyMmExYTIyYjQ0OGNiMWFjY2YxNGY4NjhlZGVhIiwidXNlcl9pZCI6MX0.C1m082sRSeMUverJqQKktmkyDqL7VUFClvFhFE2swrQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"car_number\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parking/transaction/entry/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"transaction",
+								"entry",
+								""
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:10:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Bearer realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Given token not valid for any token type\",\n    \"code\": \"token_not_valid\",\n    \"messages\": [\n        {\n            \"token_class\": \"AccessToken\",\n            \"token_type\": \"access\",\n            \"message\": \"Token is invalid or expired\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "transaction/exit/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzczMDQyLCJpYXQiOjE3MDczNzI3NDIsImp0aSI6ImRkNmFlMTQxOTFmYzQ1ZmFhN2VhZTYwZWEyNDFiMjlmIiwidXNlcl9pZCI6MX0.5rgrXFloaRoiaZMJ7mum9pBDFyo_S3oSbGhALy6-dME",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"car_number\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/parking/transaction/exit/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"parking",
+						"transaction",
+						"exit",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 Ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzczMDQyLCJpYXQiOjE3MDczNzI3NDIsImp0aSI6ImRkNmFlMTQxOTFmYzQ1ZmFhN2VhZTYwZWEyNDFiMjlmIiwidXNlcl9pZCI6MX0.5rgrXFloaRoiaZMJ7mum9pBDFyo_S3oSbGhALy6-dME",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"car_number\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parking/transaction/exit/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"transaction",
+								"exit",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:13:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"message\": \"Car 1 exited the car park.\\n A car exited the car park.\\nCar 4 exited the queue and entered the car park.\"\n}"
+				},
+				{
+					"name": "401",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3MzcyNDE3LCJpYXQiOjE3MDczNzIxMTcsImp0aSI6IjI1YjAwZjY1ZmMzMzQ1ZDg4ZTAzNTI3NWM2M2ZiYjAxIiwidXNlcl9pZCI6MX0.ksn_Kuh3AOt7iB8GsCqqUgGsNaZ9smG_CvYkhrAdg0A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"car_number\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/parking/transaction/exit/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"parking",
+								"transaction",
+								"exit",
+								""
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Feb 2024 06:11:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Bearer realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Given token not valid for any token type\",\n    \"code\": \"token_not_valid\",\n    \"messages\": [\n        {\n            \"token_class\": \"AccessToken\",\n            \"token_type\": \"access\",\n            \"message\": \"Token is invalid or expired\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
