@@ -1,4 +1,4 @@
-This project is developed using Python 3 and Django framework. For the security API, I use Django Rest Framework with Simple JWT
+This project is developed using Python 3, Django framework and for database using sqlite. For the security API, I use Django Rest Framework with Simple JWT
 How to run
 1. The command to install all Pythonmodules and packages listed in the requirements.txt file 
    pip install -r requirements.txt
